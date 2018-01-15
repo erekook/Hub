@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.erek.hub.App;
 import com.example.erek.hub.R;
@@ -21,7 +20,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity {
     @BindView(R.id.text_phone_number)
     TextInputLayout mUserNameLayout;
     @BindView(R.id.text_password)
@@ -38,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
-        setTitle("Register");
+        mToolbar.setTitle("Register");
 
         DaoSession daoSession = ((App)getApplication()).getDaoSession();
         userDao = daoSession.getUserDao();

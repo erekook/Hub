@@ -156,7 +156,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             finish();
         }
     }
-    
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
