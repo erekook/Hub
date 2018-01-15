@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/lo_phone_number"
+        android:hint="用户名"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:hintTextAppearance="@style/hintStyle"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/counterOverflowStyle"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/loet_phone_number"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/lo_password"
+        android:hint="密码"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:hintTextAppearance="@style/hintStyle"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/counterOverflowStyle"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/loet_password"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:drawableRight="@mipmap/ic_not_show_password" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="LOGIN"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:clickable="true"
+        android:text="请注册您的账号"/>
+
+</LinearLayout>
